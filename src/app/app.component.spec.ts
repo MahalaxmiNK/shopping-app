@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { ProductsComponent } from './modules/home/components/products/products.component';
-import { ProductsDisplayComponent } from './modules/home/components/products-display/products-display.component';
+import { ProductsComponent } from './modules/products/components/products/products.component';
+import { ProductsDisplayComponent } from './modules/products/components/products-display/products-display.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 describe('AppComponent', () => {
   beforeEach(() =>
