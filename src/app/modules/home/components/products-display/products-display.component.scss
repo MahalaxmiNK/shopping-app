@@ -1,0 +1,29 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  overflow-y: auto;
+  gap: 20px;
+}
+.product {
+  justify-content: center;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #fff;
+  height: 350px;
+  padding: 20px;
+}
+.product-details {
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 30px;
+}
+
+.text-bold {
+  font-weight: bold;
+  font-size: 16px;
+}

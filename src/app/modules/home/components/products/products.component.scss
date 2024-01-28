@@ -1,0 +1,83 @@
+.product-container {
+  padding: 0px 20px;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 10% 30% auto;
+}
+
+.section {
+  //width: 100%;
+  text-align: center;
+}
+
+.time-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@mixin button {
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8ed1fc;
+}
+
+.button-refresh {
+  @include button;
+  width: 100px;
+  height: 40px;
+}
+
+.categories {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.category {
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.category-name {
+  font-weight: 400;
+}
+
+.category-count {
+  color: #0077b6;
+}
+
+.category:hover {
+  background-color: #e9f8ff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button-apple {
+  @include button;
+  height: 40px;
+  width: 150px;
+  display: inline;
+}
+.product-section {
+  margin-top: 20px;
+  display: grid;
+  grid-template-rows: 4vh 50vh;
+}

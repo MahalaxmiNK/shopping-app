@@ -1,0 +1,32 @@
+<div class="product-grid">
+  <ng-container *ngFor="let product of appleProducts">
+    <div class="product">
+      <app-carousel [images]="product.images"></app-carousel>
+      <div class="product-details">
+        <div>
+          <span class="text-bold">{{ product.title }}</span>
+          <span [ngStyle]="{ color: product.stock > 0 ? 'green' : 'red' }">
+            {{ product.stock > 0 ? "In stock" : "Out of stock" }}</span
+          >
+        </div>
+        <!-- <div>{{ product.description }}</div> -->
+        <div>
+          <span
+            >{{
+              (
+                product.price -
+                (product.price * product.discountPercentage) / 100
+              ).toFixed(2)
+            }}€
+          </span>
+          <span style="color: gray; text-decoration: line-through">
+            {{ product.price }}€
+          </span>
+
+          <span style="color: red">({{ product.discountPercentage }}%)</span>
+        </div>
+        <div>{{ product.rating }}⭐</div>
+      </div>
+    </div>
+  </ng-container>
+</div>

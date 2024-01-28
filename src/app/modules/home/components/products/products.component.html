@@ -1,0 +1,26 @@
+<div class="product-container">
+  <div class="section time-section">
+    <span>Time : {{ currentTime | date : "shortTime" }}</span>
+    <span>Total products : {{ totalProducts }}</span>
+    <button class="button-refresh" (click)="refresh()">Refresh ♻</button>
+  </div>
+
+  <div class="section">
+    <h3>Explore our product categories!</h3>
+    <div class="categories">
+      <div class="category" *ngFor="let category of productsByCategory">
+        <span class="category-name"
+          >{{ category.category | categoryFormat }}
+        </span>
+        <span class="category-count"> ({{ category.products.length }})</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section product-section">
+    <h3>Apple Products 💻</h3>
+    <app-products-display
+      [appleProducts]="appleProducts"
+    ></app-products-display>
+  </div>
+</div>
